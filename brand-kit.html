@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dpnation — Brand Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Azonix';
+      font-style: normal;
+      font-weight: 400;
+      src: url('data:font/woff;base64,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') format('woff');
+    }
+  </style>
+  <style>
+    :root {
+      --ink:    #0D0D0D;
+      --canvas: #F7F6F3;
+      --mist:   #EBEBEB;
+      --smoke:  #7A7A7A;
+      --spark:  #FF8C69;
+      --white:  #FFFFFF;
+
+      --font-display: 'Plus Jakarta Sans', sans-serif;
+      --font-brand:   'Azonix', sans-serif;
+      --font-body:    'Inter', sans-serif;
+      --font-mono:    'JetBrains Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--canvas);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    /* ── Cover ───────────────────────────────── */
+    .cover {
+      background: var(--ink);
+      color: var(--white);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cover::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 120%, rgba(255,140,105,.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cover-logo {
+      width: 280px;
+      max-width: 60vw;
+      filter: invert(1);
+      margin-bottom: 3rem;
+    }
+    .cover h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .cover p {
+      font-size: 1rem;
+      color: rgba(255,255,255,.5);
+      font-family: var(--font-mono);
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .cover-tag {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 999px;
+      padding: .4rem 1.2rem;
+      font-family: var(--font-mono);
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      margin-top: 3rem;
+    }
+
+    /* ── Section layout ───────────────────────── */
+    .section {
+      padding: 6rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section + .section {
+      border-top: 1px solid var(--mist);
+    }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: .7rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--smoke);
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      margin-bottom: 1.5rem;
+    }
+    .section-desc {
+      color: var(--smoke);
+      font-size: 1rem;
+      max-width: 540px;
+      margin-bottom: 3rem;
+      line-height: 1.7;
+    }
+
+    /* ── Logo section ────────────────────────── */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .logo-card {
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .logo-card.light  { background: var(--white); border: 1px solid var(--mist); }
+    .logo-card.dark   { background: var(--ink); }
+    .logo-card.mist   { background: var(--canvas); border: 1px solid var(--mist); }
+    .logo-card img    { width: 200px; max-width: 80%; }
+    .logo-card .label {
+      font-family: var(--font-mono);
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .logo-card.dark .label { color: rgba(255,255,255,.4); }
+    .logo-card.light .label, .logo-card.mist .label { color: var(--smoke); }
+
+    .logo-dont {
+      margin-top: 2rem;
+      background: var(--white);
+      border: 1px solid var(--mist);
+      border-radius: 16px;
+      padding: 2rem;
+    }
+    .logo-dont h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .dont-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .dont-item {
+      background: var(--canvas);
+      border-radius: 10px;
+      padding: 1.5rem;
+      position: relative;
+    }
+    .dont-item::before {
+      content: '✕';
+      position: absolute;
+      top: .75rem;
+      right: .75rem;
+      color: var(--spark);
+      font-size: .8rem;
+      font-weight: 700;
+    }
+    .dont-item img {
+      width: 120px;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+    .dont-item p {
+      font-family: var(--font-mono);
+      font-size: .65rem;
+      color: var(--smoke);
+      text-align: center;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .dont-item.rotate img { transform: rotate(15deg); }
+    .dont-item.stretch img { transform: scaleX(1.4); }
+    .dont-item.low-contrast { background: #ccc; }
+    .dont-item.recolor img { filter: sepia(1) hue-rotate(200deg) saturate(3); }
+
+    /* ── Color section ────────────────────────── */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+    .color-card {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--mist);
+    }
+    .color-swatch {
+      height: 120px;
+    }
+    .color-info {
+      padding: 1rem;
+      background: var(--white);
+    }
+    .color-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: .95rem;
+      margin-bottom: .25rem;
+    }
+    .color-hex {
+      font-family: var(--font-mono);
+      font-size: .75rem;
+      color: var(--smoke);
+    }
+    .color-use {
+      font-size: .75rem;
+      color: var(--smoke);
+      margin-top: .5rem;
+      line-height: 1.4;
+    }
+
+    /* ── Typography section ───────────────────── */
+    .type-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    .type-card {
+      background: var(--white);
+      border: 1px solid var(--mist);
+      border-radius: 16px;
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: start;
+    }
+    .type-specimen {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1;
+      letter-spacing: -.02em;
+    }
+    .type-specimen.display { font-family: var(--font-display); font-weight: 800; }
+    .type-specimen.body    { font-family: var(--font-body);    font-weight: 400; font-size: clamp(1.2rem, 3vw, 2rem); }
+    .type-specimen.mono    { font-family: var(--font-mono);    font-size: clamp(1rem, 2.5vw, 1.6rem); }
+
+    .type-meta { text-align: right; min-width: 160px; }
+    .type-meta .role {
+      font-family: var(--font-mono);
+      font-size: .65rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--smoke);
+      display: block;
+      margin-bottom: .5rem;
+    }
+    .type-meta .name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: .25rem;
+    }
+    .type-meta .detail {
+      font-size: .8rem;
+      color: var(--smoke);
+      line-height: 1.5;
+    }
+    .type-scale {
+      margin-top: 3rem;
+      background: var(--white);
+      border: 1px solid var(--mist);
+      border-radius: 16px;
+      padding: 2.5rem;
+    }
+    .type-scale h3 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      color: var(--smoke);
+    }
+    .scale-row {
+      display: flex;
+      align-items: baseline;
+      gap: 2rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--mist);
+    }
+    .scale-row:last-child { border-bottom: none; }
+    .scale-label {
+      font-family: var(--font-mono);
+      font-size: .65rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--smoke);
+      min-width: 80px;
+    }
+    .scale-text { font-family: var(--font-display); font-weight: 700; }
+
+    /* ── Voice section ────────────────────────── */
+    .voice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .voice-card {
+      background: var(--white);
+      border: 1px solid var(--mist);
+      border-radius: 16px;
+      padding: 2rem;
+    }
+    .voice-card .icon {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .voice-card h3 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: .75rem;
+    }
+    .voice-card p {
+      font-size: .9rem;
+      color: var(--smoke);
+      line-height: 1.6;
+    }
+
+    .voice-dos-donts {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 600px) { .voice-dos-donts { grid-template-columns: 1fr; } }
+
+    .dos, .donts {
+      border-radius: 16px;
+      padding: 2rem;
+    }
+    .dos   { background: #F0FFF4; border: 1px solid #BBFFD0; }
+    .donts { background: #FFF0F3; border: 1px solid #FFBBCC; }
+    .dos h3   { color: #007A33; font-family: var(--font-display); font-weight: 700; font-size: 1rem; margin-bottom: 1rem; }
+    .donts h3 { color: #CC0022; font-family: var(--font-display); font-weight: 700; font-size: 1rem; margin-bottom: 1rem; }
+    .dos li, .donts li {
+      font-size: .875rem;
+      margin-bottom: .5rem;
+      margin-left: 1.25rem;
+      line-height: 1.5;
+    }
+
+    /* ── Tagline section ──────────────────────── */
+    .tagline-block {
+      background: var(--ink);
+      border-radius: 24px;
+      padding: 4rem;
+      color: var(--white);
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .tagline-block .pre {
+      font-family: var(--font-mono);
+      font-size: .7rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 1.5rem;
+    }
+    .tagline-block blockquote {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 4vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -.02em;
+      line-height: 1.15;
+    }
+    .tagline-block blockquote em {
+      color: var(--spark);
+      font-style: normal;
+    }
+
+    .copy-examples {
+      display: grid;
+      gap: 1rem;
+    }
+    .copy-ex {
+      background: var(--white);
+      border: 1px solid var(--mist);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    .copy-ex .badge {
+      font-family: var(--font-mono);
+      font-size: .6rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      background: var(--canvas);
+      border: 1px solid var(--mist);
+      border-radius: 6px;
+      padding: .3rem .6rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-top: .2rem;
+    }
+    .copy-ex p {
+      font-size: .95rem;
+      line-height: 1.6;
+      color: var(--ink);
+    }
+
+    /* ── Usage clearspace ─────────────────────── */
+    .clearspace-demo {
+      background: var(--white);
+      border: 1px solid var(--mist);
+      border-radius: 16px;
+      padding: 3rem;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .clearspace-inner {
+      position: relative;
+      border: 2px dashed var(--spark);
+      padding: 2rem;
+      display: inline-block;
+    }
+    .clearspace-inner img { width: 180px; display: block; }
+    .clearspace-inner .arrow {
+      position: absolute;
+      font-family: var(--font-mono);
+      font-size: .6rem;
+      color: var(--spark);
+      white-space: nowrap;
+    }
+    .clearspace-inner .arrow.top { top: -1.4rem; left: 50%; transform: translateX(-50%); }
+    .clearspace-inner .arrow.bottom { bottom: -1.4rem; left: 50%; transform: translateX(-50%); }
+    .clearspace-inner .arrow.left  { left: -3.5rem; top: 50%; transform: translateY(-50%); }
+    .clearspace-inner .arrow.right { right: -3.5rem; top: 50%; transform: translateY(-50%); }
+
+    /* ── Footer ──────────────────────────────── */
+    .bk-footer {
+      background: var(--ink);
+      color: rgba(255,255,255,.4);
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+    .bk-footer p {
+      font-family: var(--font-mono);
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .bk-footer strong { color: rgba(255,255,255,.7); }
+
+    /* ── Print ───────────────────────────────── */
+    @media print {
+      .cover { min-height: auto; padding: 3rem; }
+      .section { padding: 3rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── COVER ──────────────────────────────────── -->
+<section class="cover">
+  <div>
+    <img class="cover-logo" src="images/dpnation-logo.png" alt="dpnation logo">
+    <h1>Brand Kit</h1>
+    <p>Identity · Color · Typography · Voice</p>
+    <span class="cover-tag">Version 1.0 — 2025</span>
+  </div>
+</section>
+
+<!-- ── LOGO ───────────────────────────────────── -->
+<div class="section">
+  <p class="section-label">01 — Logo</p>
+  <h2 class="section-title">The dpnation Mark</h2>
+  <p class="section-desc">The wordmark is the primary brand asset. It is always set in all-lowercase and rendered in solid black or white — never in color. Use the transparent PNG variants for layering.</p>
+
+  <div class="logo-grid">
+    <div class="logo-card light">
+      <img src="images/dpnation-logo.png" alt="dpnation logo — black on white">
+      <span class="label">Black on Light</span>
+    </div>
+    <div class="logo-card dark">
+      <img src="images/dpnation-logo.png" alt="dpnation logo — white on dark" style="filter:invert(1)">
+      <span class="label" style="color:rgba(255,255,255,.4)">White on Dark</span>
+    </div>
+    <div class="logo-card mist">
+      <img src="images/dpnation-logo.png" alt="dpnation logo — black on mist">
+      <span class="label">Black on Mist</span>
+    </div>
+  </div>
+
+  <div class="logo-dont" style="margin-top:2rem;">
+    <h3>Logo don'ts</h3>
+    <div class="dont-grid">
+      <div class="dont-item rotate">
+        <img src="images/dpnation-logo.png" alt="">
+        <p>Don't rotate or tilt</p>
+      </div>
+      <div class="dont-item stretch">
+        <img src="images/dpnation-logo.png" alt="">
+        <p>Don't stretch or distort</p>
+      </div>
+      <div class="dont-item recolor">
+        <img src="images/dpnation-logo.png" alt="">
+        <p>Don't recolor the mark</p>
+      </div>
+      <div class="dont-item low-contrast">
+        <img src="images/dpnation-logo.png" alt="" style="opacity:.3">
+        <p>Don't use on low-contrast backgrounds</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:2rem;">
+    <p style="font-size:.875rem; color:var(--smoke); margin-bottom:.75rem;">Minimum clear space</p>
+    <div class="clearspace-demo">
+      <div class="clearspace-inner">
+        <span class="arrow top">½x padding</span>
+        <span class="arrow bottom">½x padding</span>
+        <span class="arrow left">½x</span>
+        <span class="arrow right">½x</span>
+        <img src="images/dpnation-logo.png" alt="dpnation logo clearspace">
+      </div>
+    </div>
+    <p style="font-size:.8rem; color:var(--smoke);">Maintain clear space equal to ½ the logo height on all sides.</p>
+  </div>
+</div>
+
+<!-- ── COLOR ──────────────────────────────────── -->
+<div class="section">
+  <p class="section-label">02 — Color</p>
+  <h2 class="section-title">Color Palette</h2>
+  <p class="section-desc">A high-contrast palette built around ink and canvas, with Spark as the single expressive accent. Use Spark sparingly — it should earn its place.</p>
+
+  <div class="color-grid">
+    <div class="color-card">
+      <div class="color-swatch" style="background:#0D0D0D"></div>
+      <div class="color-info">
+        <div class="color-name">Ink</div>
+        <div class="color-hex">#0D0D0D</div>
+        <div class="color-use">Primary text, logo, UI foreground</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#F7F6F3; border-bottom:1px solid #EBEBEB;"></div>
+      <div class="color-info">
+        <div class="color-name">Canvas</div>
+        <div class="color-hex">#F7F6F3</div>
+        <div class="color-use">Page background, warm off-white</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#EBEBEB"></div>
+      <div class="color-info">
+        <div class="color-name">Mist</div>
+        <div class="color-hex">#EBEBEB</div>
+        <div class="color-use">Dividers, card borders, subtle UI</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#7A7A7A"></div>
+      <div class="color-info">
+        <div class="color-name">Smoke</div>
+        <div class="color-hex">#7A7A7A</div>
+        <div class="color-use">Secondary text, captions, metadata</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#FF8C69"></div>
+      <div class="color-info">
+        <div class="color-name">Spark</div>
+        <div class="color-hex">#FF8C69</div>
+        <div class="color-use">Accent only — links, CTAs, highlights</div>
+      </div>
+    </div>
+    <div class="color-card">
+      <div class="color-swatch" style="background:#FFFFFF; border-bottom:1px solid #EBEBEB;"></div>
+      <div class="color-info">
+        <div class="color-name">White</div>
+        <div class="color-hex">#FFFFFF</div>
+        <div class="color-use">Card surfaces, logo on dark</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── TYPOGRAPHY ──────────────────────────────── -->
+<div class="section">
+  <p class="section-label">03 — Typography</p>
+  <h2 class="section-title">Type System</h2>
+  <p class="section-desc">Four families, each with a distinct role. Azonix defines the brand mark. Plus Jakarta Sans commands attention in display contexts. Inter handles everything else with clarity. JetBrains Mono keeps the technical edge.</p>
+
+  <div class="type-grid">
+    <div class="type-card">
+      <div>
+        <div style="font-family:var(--font-brand); font-size:clamp(1.6rem, 4vw, 2.8rem); line-height:1; letter-spacing:.04em;">DP ⚡ NATION</div>
+        <div style="margin-top:1rem; font-family:var(--font-brand); color:var(--smoke); font-size:.9rem; letter-spacing:.05em;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+      </div>
+      <div class="type-meta">
+        <span class="role">Brand / Logo</span>
+        <div class="name">Azonix</div>
+        <div class="detail">Weight: 400<br>Wordmark, logo lockup, uppercase mark only</div>
+      </div>
+    </div>
+    <div class="type-card">
+      <div>
+        <div class="type-specimen display">dpnation</div>
+        <div style="margin-top:1rem; font-family:var(--font-display); font-weight:400; color:var(--smoke); font-size:.9rem;">AaBbCcDdEeFfGgHhIiJj</div>
+      </div>
+      <div class="type-meta">
+        <span class="role">Display</span>
+        <div class="name">Plus Jakarta Sans</div>
+        <div class="detail">Weights: 400–800<br>Headlines, social assets, display sizes</div>
+      </div>
+    </div>
+    <div class="type-card">
+      <div>
+        <div class="type-specimen body">it's more than a look,<br>it's a lifestyle</div>
+        <div style="margin-top:1rem; font-family:var(--font-body); color:var(--smoke); font-size:.9rem;">AaBbCcDdEeFfGgHhIiJj</div>
+      </div>
+      <div class="type-meta">
+        <span class="role">Body</span>
+        <div class="name">Inter</div>
+        <div class="detail">Weights: 300–600<br>Body copy, UI elements, navigation</div>
+      </div>
+    </div>
+    <div class="type-card">
+      <div>
+        <div class="type-specimen mono">dp@dpnation.com</div>
+        <div style="margin-top:1rem; font-family:var(--font-mono); color:var(--smoke); font-size:.9rem;">AaBbCc 0123456789</div>
+      </div>
+      <div class="type-meta">
+        <span class="role">Mono</span>
+        <div class="name">JetBrains Mono</div>
+        <div class="detail">Weights: 400–500<br>Labels, tags, code, metadata</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="type-scale">
+    <h3>Typographic scale</h3>
+    <div class="scale-row">
+      <span class="scale-label">Display</span>
+      <span class="scale-text" style="font-size:3rem;">dpnation</span>
+    </div>
+    <div class="scale-row">
+      <span class="scale-label">H1</span>
+      <span class="scale-text" style="font-size:2rem;">Welcome, friend.</span>
+    </div>
+    <div class="scale-row">
+      <span class="scale-label">H2</span>
+      <span class="scale-text" style="font-size:1.5rem;">Selected Work</span>
+    </div>
+    <div class="scale-row">
+      <span class="scale-label">H3</span>
+      <span class="scale-text" style="font-size:1.125rem;">Web Design</span>
+    </div>
+    <div class="scale-row">
+      <span class="scale-label">Body</span>
+      <span style="font-family:var(--font-body); font-size:1rem; color:var(--smoke);">fluent in web development, product marketing, software testing and brand management</span>
+    </div>
+    <div class="scale-row">
+      <span class="scale-label">Caption</span>
+      <span style="font-family:var(--font-mono); font-size:.75rem; color:var(--smoke); letter-spacing:.05em;">01 — Project — 2025</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── VOICE ───────────────────────────────────── -->
+<div class="section">
+  <p class="section-label">04 — Voice &amp; Tone</p>
+  <h2 class="section-title">Brand Voice</h2>
+  <p class="section-desc">dpnation speaks with the confidence of someone who knows their craft — and the warmth of someone who actually wants to help.</p>
+
+  <div class="tagline-block">
+    <div class="pre">Primary tagline</div>
+    <blockquote>it's more than a look,<br>it's a <em>lifestyle</em></blockquote>
+  </div>
+
+  <div class="voice-grid">
+    <div class="voice-card">
+      <div class="icon">⚡</div>
+      <h3>Direct</h3>
+      <p>No corporate fluff, no filler. Every word earns its place. State the thing, then move on.</p>
+    </div>
+    <div class="voice-card">
+      <div class="icon">🎯</div>
+      <h3>Expert</h3>
+      <p>Speaks from a place of deep craft. Fluent in web design, UX, testing, and brand. The work speaks for itself.</p>
+    </div>
+    <div class="voice-card">
+      <div class="icon">✦</div>
+      <h3>Warm</h3>
+      <p>Not cold or clinical. There's a person here. "Welcome, friend" — not "Hello, visitor."</p>
+    </div>
+    <div class="voice-card">
+      <div class="icon">🏴</div>
+      <h3>Intentional</h3>
+      <p>Everything is considered. The lowercase, the spacing, the silence. Design is the message.</p>
+    </div>
+  </div>
+
+  <div class="voice-dos-donts">
+    <div class="dos">
+      <h3>✓ Do</h3>
+      <ul>
+        <li>Write in lowercase for brand-level copy (taglines, nav, logo)</li>
+        <li>Use short sentences. Let them breathe.</li>
+        <li>Lead with the benefit or the work</li>
+        <li>Say "friend" not "user" — personal, not transactional</li>
+        <li>Describe craft with specificity (web design, UX, brand management)</li>
+        <li>Skip the Oxford comma in lists (e.g. "web design, UX and brand")</li>
+      </ul>
+    </div>
+    <div class="donts">
+      <h3>✕ Don't</h3>
+      <ul>
+        <li>Use buzzwords: "passionate," "synergy," "guru"</li>
+        <li>Over-explain or hedge unnecessarily</li>
+        <li>Use exclamation points in formal contexts</li>
+        <li>Use the brand color (Spark) for large areas of text</li>
+        <li>Write in second person for the primary tagline</li>
+        <li>Use em dashes — rewrite the sentence or use a comma instead</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-top:3rem;">
+    <p class="section-label" style="margin-bottom:1.5rem;">Copy examples</p>
+    <div class="copy-examples">
+      <div class="copy-ex">
+        <span class="badge">Bio</span>
+        <p>fluent in web development, product marketing, software testing and brand management</p>
+      </div>
+      <div class="copy-ex">
+        <span class="badge">Greeting</span>
+        <p>Welcome, friend. Here's where the work lives.</p>
+      </div>
+      <div class="copy-ex">
+        <span class="badge">CTA</span>
+        <p>Want to build something? Reach out at <strong>dp@dpnation.com</strong></p>
+      </div>
+      <div class="copy-ex">
+        <span class="badge">Social</span>
+        <p>it's more than a look, it's a lifestyle ⌀ webdev · design · ux</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER ──────────────────────────────────── -->
+<footer class="bk-footer">
+  <p><strong>dpnation</strong> brand kit — version 1.0<br>
+  Questions? <strong>dp@dpnation.com</strong> · dpnation.com</p>
+</footer>
+
+</body>
+</html>
