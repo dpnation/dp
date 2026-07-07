@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+	<link rel="icon" href="https://dpnation.github.io/dp/images/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Visibility Audit - Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0D0D0D;
+    --canvas: #F7F6F3;
+    --mist: #EBEBEB;
+    --smoke: #7A7A7A;
+    --spark: #FF8C69;
+    --white: #FFFFFF;
+    --font-display: 'Plus Jakarta Sans', Arial, sans-serif;
+    --font-body: 'Inter', Arial, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--ink);
+    background: var(--canvas);
+    line-height: 1.6;
+  }
+
+  .hero {
+    background: var(--ink);
+    color: var(--canvas);
+    padding: 64px 24px 56px;
+    text-align: left;
+  }
+
+  .hero-inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--spark);
+    margin: 0 0 16px;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 1.25;
+    margin: 0 0 14px;
+    color: var(--white);
+  }
+
+  .subtitle {
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--mist);
+    margin: 0;
+    max-width: 640px;
+  }
+
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 21px;
+    color: var(--ink);
+    margin: 44px 0 14px;
+    line-height: 1.3;
+  }
+
+  h2:first-child { margin-top: 0; }
+
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--ink);
+    margin: 22px 0 8px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 14px;
+  }
+
+  ul {
+    margin: 0 0 16px;
+    padding-left: 22px;
+  }
+
+  li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  li ul {
+    margin-top: 10px;
+  }
+
+  .card {
+    background: var(--white);
+    border: 1px solid var(--mist);
+    border-radius: 4px;
+    padding: 20px 22px;
+    margin: 16px 0 20px;
+  }
+
+  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+
+  .label-pmm, .label-ai, .label-alt {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 4px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+
+  .label-pmm {
+    background: var(--mist);
+    color: var(--ink);
+  }
+
+  .label-ai {
+    background: var(--ink);
+    color: var(--spark);
+  }
+
+  .label-alt {
+    background: var(--spark);
+    color: var(--ink);
+  }
+
+  .stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 20px 0 8px;
+  }
+
+  .stat {
+    flex: 1 1 130px;
+    background: var(--canvas);
+    border: 1px solid var(--mist);
+    border-radius: 4px;
+    padding: 18px 20px;
+  }
+
+  .stat .num {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 26px;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .stat .num::before {
+    content: "⚡";
+    font-size: 16px;
+    margin-right: 6px;
+    color: var(--spark);
+  }
+
+  .stat .desc {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--smoke);
+  }
+
+  em.note {
+    display: block;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--ink);
+    background: var(--mist);
+    border-left: 3px solid var(--spark);
+    padding: 10px 14px;
+    border-radius: 3px;
+    margin-top: 12px;
+  }
+
+  .footer {
+    border-top: 1px solid var(--mist);
+    margin-top: 56px;
+    padding-top: 24px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--smoke);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .footer a {
+    color: var(--smoke);
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    color: var(--spark);
+  }
+
+  a { color: var(--spark); }
+
+  strong { font-weight: 600; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 27px; }
+    .hero { padding: 48px 20px 40px; }
+    .container { padding: 36px 20px 60px; }
+    .footer { justify-content: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">AI Tooling Case Study</p>
+    <h1>AI Visibility: Building the layer a fix-it plan didn't have</h1>
+    <p class="subtitle">The AI visibility project plan mapped what to fix. It didn't have a way to diagnose what was actually broken before the work started, or a way to tell if the fixes worked after. That missing layer has been built as three Claude skills.</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <h2>What it is</h2>
+  <p>Three skills, each answering a different question the project plan's fix framework couldn't answer on its own:</p>
+  <ul>
+    <li><strong>AI Visibility Audit (ai-seo-aeo)</strong> - inward-looking. Audits any company page and produces a full report on content structure, schema, bot access, external presence and competitive gaps. Maps to Phase 1 of the project plan and doubles as the technical baseline audit.</li>
+    <li><strong>LLM Visibility Analyzer (llm-visibility-analyzer)</strong> - outward-looking. Takes completed citation-tracking data and reports where the company is invisible across AI platforms, who owns that space instead and what content would close the gap.</li>
+    <li><strong>Audit Evaluator (ai-seo-aeo-evaluator)</strong> - the QA layer. Reviews every report before it reaches a stakeholder outside marketing, catching unverified claims, stale data and outdated guidance.</li>
+  </ul>
+
+  <h2>How it works</h2>
+  <p>Each page gets scored against a fixed rubric - structure, authority, presence - and the finding becomes a page-level report with a distribution call attached. Three runs show how the audit, analyzer and evaluator skills each handle a different part of the same problem:</p>
+
+  <div class="card">
+    <span class="label-pmm">Page Audit</span>
+    <p>The STLC blog post: strong H1 and opening definition, but zero statistics in a 14-minute read, no HowTo schema, and 19 months old with no freshness signal. Scored 20/24 and cleared to distribute, with each gap routed to an owner rather than left as a general note.</p>
+  </div>
+
+  <div class="card">
+    <span class="label-alt">LLM Visibility Analyzer</span>
+    <p>Fed a completed, manually-run 63-query audit across Perplexity, ChatGPT and Gemini, the analyzer turned raw citation data into a diagnosis: a 17% overall citation rate, driven almost entirely by crowdtesting vendor-list queries. Four categories - AI Testing, Accessibility Testing, Mobile App Testing, and the company's own "Digital Quality" brand term - returned zero citations across every platform, and evaluative and investigative queries, the ones buyers ask while actually forming a shortlist, sat at 0% as well.</p>
+  </div>
+
+  <div class="card">
+    <span class="label-ai">Evaluator QA Pass</span>
+    <p>Not every audit gets waved through. The evaluator skill reviews each one before it's allowed to leave marketing:</p>
+    <div class="stat-row">
+      <div class="stat"><span class="num">20</span><span class="desc">Pages audited in the batch</span></div>
+      <div class="stat"><span class="num">14</span><span class="desc">Evaluator runs against those audits</span></div>
+      <div class="stat"><span class="num">13</span><span class="desc">Cleared for distribution</span></div>
+    </div>
+    <p>The rest came back as "revise before distribute" or "focused audit" rather than a hard fail - the evaluator judged those pages worth a narrower pass instead of the full 24-point treatment.</p>
+  </div>
+
+  <h2>Time saved</h2>
+  <p>Building the audit skill in the first place put a number on the shortcut. Running it against the same twenty-page batch instead of auditing manually:</p>
+  <div class="stat-row">
+    <div class="stat"><span class="num">18–25 hrs</span><span class="desc">Estimated human baseline to audit 20 pages manually</span></div>
+    <div class="stat"><span class="num">4–6 hrs</span><span class="desc">Actual active time spent with Claude</span></div>
+  </div>
+
+  <h2>Why she built it</h2>
+  <ul>
+    <li>The project plan had a framework for what to fix once a problem was known, but no systematic way to diagnose what was actually broken first, or to measure whether a fix worked after.</li>
+    <li>No one owned AI search visibility specifically - it sat in the gap between traditional SEO and product marketing.</li>
+    <li>Findings that reach Web, IT and Content need to be defensible before they're handed off - an unsourced stat or a wrong schema claim costs credibility with teams outside marketing.</li>
+    <li>Running 63 queries by hand across three platforms every month isn't something Claude can do on its own yet - the analyzer needed a repeatable way to turn that manual data into a structured diagnosis once it existed.</li>
+  </ul>
+
+  <h2>How it's been tweaked</h2>
+  <ul>
+    <li><strong>From one skill to three.</strong> The audit skill shipped first and handled the inward-facing, page-level work. The analyzer was added specifically to handle the outward-facing question - where the company is cited across AI platforms, not just what's wrong with its own pages. The evaluator came last, as a check on both.</li>
+    <li><strong>A monthly tracker for the piece that can't be automated yet.</strong> Running the 63-query audit by hand isn't something Claude can currently do - possibly with Claude in Chrome down the line. In the meantime, a tracker spreadsheet was built off the original query set so someone else on the team can run and log the same monthly audit, with the completed data feeding straight into the analyzer.</li>
+    <li><strong>From page-level only to a sitewide findings tracker.</strong> Individual audit reports now roll up into one findings table with an explicit owner and status per issue, so nothing depends on someone reading twenty separate reports.</li>
+  </ul>
+
+  <h2>Demonstrated impact</h2>
+  <p>The payment testing audit and the 63-query analyzer baseline gave the project plan something it didn't have before: numbers. The company is cited in just 17% of the 63 tracked queries, all from crowdtesting vendor lists, with a complete blackout in AI Testing, Accessibility Testing, Mobile App Testing and its own "Digital Quality" category. The 20-page sitewide batch behind that found the same pattern on-page - unsourced proof-point stats, a comparison table locked inside a PNG image and invisible to any AI bot, and missing schema across nearly every asset in scope - with 13 of 20 audits clearing the evaluator's bar for external distribution on the first pass.</p>
+
+  <h2>What's next</h2>
+  <ul>
+    <li>"Digital Quality" is the analyzer's top recommendation - no competitor currently owns the term, and it's the company's own brand language. First mover on a definitive piece wins the category in LLM outputs.</li>
+    <li>The monthly tracker keeps feeding fresh data into the analyzer, so the 63-query baseline turns into a trend line instead of a single snapshot.</li>
+    <li>Robots.txt and bot configuration is still open with Web/IT - several AI citation bots are unverified or blocked, which limits every other optimization until it's fixed.</li>
+    <li>If Claude in Chrome becomes available, the manual query-running step in the analyzer's pipeline is the first candidate to automate.</li>
+  </ul>
+
+  <div class="footer">
+    <span>AI Visibility case study</span>
+    <a href="https://dpnation.com" target="_blank" rel="noopener">dpnation.com</a>
+  </div>
+
+</div>
+
+</body>
+</html>
