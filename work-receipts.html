@@ -5,31 +5,36 @@
 	<link rel="icon" href="https://dpnation.github.io/marketing/favicon.ico" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Work Receipts - Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --blue-500: #0272B4;
-    --blue-700: #01446C;
-    --blue-100: #E6F3FA;
-    --blue-50: #F7FBFE;
-    --aqua-500: #00C0A3;
-    --gray-700: #3D3D3D;
-    --yellow-500: #FFC400;
-    --font-primary: 'Proxima Nova', Arial, sans-serif;
+    --ink: #0D0D0D;
+    --canvas: #F7F6F3;
+    --mist: #EBEBEB;
+    --smoke: #7A7A7A;
+    --spark: #FF8C69;
+    --white: #FFFFFF;
+    --font-display: 'Plus Jakarta Sans', Arial, sans-serif;
+    --font-body: 'Inter', Arial, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
   }
 
   * { box-sizing: border-box; }
 
   body {
     margin: 0;
-    font-family: var(--font-primary);
-    color: var(--gray-700);
-    background: #FFFFFF;
-    line-height: 1.5;
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--ink);
+    background: var(--canvas);
+    line-height: 1.6;
   }
 
   .hero {
-    background: linear-gradient(135deg, var(--blue-700), var(--blue-500));
-    color: #FFFFFF;
+    background: var(--ink);
+    color: var(--canvas);
     padding: 64px 24px 56px;
     text-align: left;
   }
@@ -40,25 +45,28 @@
   }
 
   .eyebrow {
+    font-family: var(--font-mono);
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--aqua-500);
-    margin: 0 0 12px;
+    letter-spacing: 0.1em;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--spark);
+    margin: 0 0 16px;
   }
 
   h1 {
+    font-family: var(--font-display);
     font-weight: 800;
     font-size: 34px;
     line-height: 1.25;
     margin: 0 0 14px;
-    color: #FFFFFF;
+    color: var(--white);
   }
 
   .subtitle {
     font-size: 17px;
-    color: var(--blue-100);
+    font-weight: 300;
+    color: var(--mist);
     margin: 0;
     max-width: 640px;
   }
@@ -70,9 +78,10 @@
   }
 
   h2 {
-    font-weight: 800;
+    font-family: var(--font-display);
+    font-weight: 700;
     font-size: 21px;
-    color: var(--blue-700);
+    color: var(--ink);
     margin: 44px 0 14px;
     line-height: 1.3;
   }
@@ -80,14 +89,16 @@
   h2:first-child { margin-top: 0; }
 
   h3 {
-    font-weight: 700;
+    font-family: var(--font-display);
+    font-weight: 600;
     font-size: 16px;
-    color: var(--blue-700);
+    color: var(--ink);
     margin: 22px 0 8px;
   }
 
   p {
     font-size: 16px;
+    font-weight: 400;
     margin: 0 0 14px;
   }
 
@@ -106,9 +117,9 @@
   }
 
   .card {
-    background: var(--blue-50);
-    border: 1px solid var(--blue-100);
-    border-radius: 10px;
+    background: var(--white);
+    border: 1px solid var(--mist);
+    border-radius: 4px;
     padding: 20px 22px;
     margin: 16px 0 20px;
   }
@@ -117,23 +128,24 @@
 
   .label-pmm, .label-ai {
     display: inline-block;
+    font-family: var(--font-mono);
     font-size: 11px;
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
-    padding: 3px 10px;
-    border-radius: 4px;
-    margin-bottom: 8px;
+    letter-spacing: 0.06em;
+    padding: 4px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
   }
 
   .label-pmm {
-    background: var(--blue-100);
-    color: var(--blue-700);
+    background: var(--mist);
+    color: var(--ink);
   }
 
   .label-ai {
-    background: rgba(0, 192, 163, 0.15);
-    color: #007A69;
+    background: var(--ink);
+    color: var(--spark);
   }
 
   .stat-row {
@@ -145,43 +157,53 @@
 
   .stat {
     flex: 1 1 200px;
-    background: #FFFFFF;
-    border: 1px solid var(--blue-100);
-    border-radius: 10px;
+    background: var(--canvas);
+    border: 1px solid var(--mist);
+    border-radius: 4px;
     padding: 18px 20px;
   }
 
   .stat .num {
+    font-family: var(--font-display);
     font-weight: 800;
     font-size: 26px;
-    color: var(--blue-500);
+    color: var(--ink);
     display: block;
     margin-bottom: 4px;
   }
 
+  .stat .num::before {
+    content: "⚡";
+    font-size: 16px;
+    margin-right: 6px;
+    color: var(--spark);
+  }
+
   .stat .desc {
-    font-size: 13px;
-    color: var(--gray-700);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--smoke);
   }
 
   em.note {
     display: block;
     font-style: normal;
     font-size: 14px;
-    color: var(--gray-700);
-    background: #FFF8E1;
-    border-left: 3px solid var(--yellow-500);
+    color: var(--ink);
+    background: var(--mist);
+    border-left: 3px solid var(--spark);
     padding: 10px 14px;
-    border-radius: 4px;
+    border-radius: 3px;
     margin-top: 12px;
   }
 
   .footer {
-    border-top: 1px solid var(--blue-100);
+    border-top: 1px solid var(--mist);
     margin-top: 56px;
     padding-top: 24px;
-    font-size: 13px;
-    color: #6B6B6B;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--smoke);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -190,15 +212,17 @@
   }
 
   .footer a {
-    color: #6B6B6B;
+    color: var(--smoke);
     text-decoration: none;
   }
 
   .footer a:hover {
-    color: var(--blue-500);
+    color: var(--spark);
   }
 
-  a { color: var(--blue-500); }
+  a { color: var(--spark); }
+
+  strong { font-weight: 600; }
 
   @media (max-width: 600px) {
     h1 { font-size: 27px; }
@@ -244,7 +268,7 @@
   <h2>Why she built it</h2>
   <ul>
     <li>No automated rollup existed for her tools and workflows, so manual tracking was either skipped under time pressure or reconstructed inaccurately at reporting time.</li>
-    <li>She wanted defensible proof points tied to her actual goals, not just a list of activities - real time-saved estimates and business impact framing.</li>
+    <li>She needed defensible proof points tied to her actual goals, not just a list of activities - real time-saved estimates and business impact framing.</li>
     <li>As a team of one running a growing AI tool ecosystem, she needed a system that could recall work from early in a reporting period, not just whatever was top of mind recently.</li>
     <li>Her AI projects rarely ship as one-and-done - they evolve from a rough v1 into more robust, more complicated versions over the course of a quarter, and sometimes across several. She needed a way to account for that evolution at each phase, not just log the final state.</li>
   </ul>
