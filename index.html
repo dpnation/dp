@@ -9,6 +9,8 @@
   <meta property="og:description" content="it's more than a look, it's a lifestyle">
   <meta property="og:url" content="https://dpnation.com">
   <meta name="twitter:card" content="summary">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" href="images/favicon.png" sizes="64x64">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -43,8 +45,7 @@
     /* ── Content panel ── */
     .content {
       display: grid;
-      place-items: start center;
-      align-content: center;
+      place-items: center;
       padding: 4rem 3.5rem 4rem 4rem;
       position: relative;
     }
@@ -66,6 +67,7 @@
     }
 
     .logo {
+      display: block;
       width: 420px;
       max-width: 100%;
       filter: invert(1);
@@ -94,8 +96,26 @@
       text-transform: uppercase;
       color: rgba(255,255,255,.28);
       line-height: 2.2;
-      margin-bottom: 2.75rem;
+      margin-bottom: .5rem;
     }
+
+    .bio-alt {
+      color: rgba(255,140,105,.45);
+    }
+
+    .bio-aside {
+      display: block;
+      font-size: .62rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.2);
+      text-decoration: none;
+      margin-top: 1.25rem;
+      margin-bottom: 2.75rem;
+      transition: color .2s;
+    }
+
+    .bio-aside:hover { color: var(--spark); }
 
     /* ── Links ── */
     .links {
@@ -169,7 +189,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, var(--ink) 0%, transparent 30%);
+      background: linear-gradient(to right, var(--ink) 0%, transparent 55%);
       z-index: 1;
       pointer-events: none;
     }
@@ -252,8 +272,12 @@
 
       <p class="bio">
         web development &middot; product marketing<br>
-        software testing &middot; brand management
+        product management &middot; software testing<br>
+        brand management &middot; AI builder<br>
+        <br>
+        <span class="bio-alt">elite cyclocross and gravel racing</span>
       </p>
+      <a class="bio-aside" href="https://kingdomsgambit.com" target="_blank" rel="noopener noreferrer">also: the kingdom's gambit ↗</a>
 
       <div class="links">
         <a class="link-btn" href="https://github.com/dpnation" target="_blank" rel="noopener noreferrer">
